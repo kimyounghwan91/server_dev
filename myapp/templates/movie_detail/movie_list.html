@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<main id="contents">
+    <section id="movie" >
+        <div class="container">
+            <div class="row">
+                <h2 class="ir_so">영화</h2>
+                <div class="movie" style="padding-bottom: 0px;">
+                    <div class="movie_title">
+                        <ul class="clearfix">
+                            <li class="active"><a href="#"><button type="button"style="width: 60px;height: 60px;"><img class="small_log" src="../static/img/btn_netflix_circle.png" alt=""></button></a></li>
+                            <li><a href="#"><button type="button" style="width: 60px;height: 60px;"><img class="small_log" src="../static/img/btn_disney_circle.png" alt=""></button></a></li>
+                            <li><a href="#"><button type="button"style="width: 60px;height: 60px;"><img class="small_log" src="../static/img/btn_wavve_circle.png" alt=""></button></a></li>
+                            <li><a href="#"><button type="button"style="width: 60px;height: 60px;"><img class="small_log" src="../static/img/btn_watchaplay_circle.png" alt=""></button></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>                       
+        <div class="movieContent_chart">
+            <div class="movie-container">
+                <div class="movie-wrapper" >
+                    {% for list in movie|slice:"0:200" %}     
+                    <div class="MovieItem grid" key-data="{{list.id}}">
+                        <a href="#" title="{{list.title}}" style="display: block;">
+                            <div class="poster">                                    
+                                <img  src="{{list.poster_link}}" alt="{{list.title}}">
+                            </div>
+                        </a>
+                        <div class="info">
+                            <div class="title"><strong>{{list.title}}<p>({{list.opening_date}})</p></strong></div>
+                            <div class="runtime_rating">
+                                <div class="runtime" href="#">{{list.runtime}}</div>
+                                <div class="rating" href="#">{{list.just_rating}}</div>                                
+                            </div>                                                              
+                        </div>                                                                                                            
+                    </div>
+                    {% endfor %}                     
+                </div>                    
+            </div>
+        </div>           
+    </section> 
+</main>
+{% endblock %}   
+
