@@ -23,3 +23,7 @@ class Movie(models.Model):
         managed = False
         db_table = 'movie'
         ordering = ['-opening_date']
+
+
+
+

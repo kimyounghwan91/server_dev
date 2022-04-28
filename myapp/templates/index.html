@@ -16,7 +16,7 @@
                         <div class="container">
                             <div class="row">
                                 <h3>워킹데드</h3>
-                                <p>좀비랑 싸우자 </p>
+                                <p><워킹데드>는 동명의 코믹스를 원작으로 한 좀비 아포칼립스 드라마다. 미국 케이블 방송국 AMC의 간판 타이틀로 국내에 소개되는 미드중에서도 인기가 매우 높다. 좀비 액션보다 혹독한 환경에 놓인 인간들의 멘붕과 갈등이 중요하게 그려지는것이 특징이다. </p>
                             </div>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <div class="container">
                             <div class="row">
                                 <h3>왕좌의 게임</h3>
-                                <p>다 죽는다 </p>
+                                <p>《왕좌의 게임》은 2011년 4월 17일부터 2019년 5월 19일까지 HBO에서 방영된 드라마이다. 동명의 소설을 바탕으로 하고 있다. 데이비드 베니오프가 D. B. 와이스와 함께 기획했다 </p>
                             </div>
                         </div>
                     </div>
@@ -58,107 +58,27 @@
                             <li><a href="#"><button type="button"style="width: 60px;height: 60px;"><img class="small_log" src="static/img/btn_watchaplay_circle.png" alt=""></button></a></li>
                         </ul>
                     </div>
-                    <div class="movie_chart">
-                        <div class="swiper-container2">
+                    
+                    <div class="movie_chart">                         
+                        <div class="swiper-container2">                       
                            <div class="chart_cont1 swiper-wrapper">
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>                                            
-                                            <img src="https://images.justwatch.com/poster/253033499/s592" alt="프리가이">                                            
-                                       </figure>                                       
-                                   </div>
+                            {% for list in movie|slice:"0:10" %}                     
+                               <div class="swiper-slide">                                                                                             
+                                   <div class="poster">                                                                          
+                                       <figure>                                                                     
+                                            <img src="{{list.poster_link}}" alt="프리가이">                                                                                       
+                                       </figure>                                                                            
+                                   </div>                                   
                                    <div class="infor">
-                                       <h3><strong>프리가이</strong></h3>
+                                       <h3><strong>{{list.title}}</strong></h3>                                         
                                        <div class="infor_btn">
                                            <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
+                                           <a href="#">바로보기</a>                                          
+                                       </div>                                                                            
+                                   </div>                                                            
                                </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="https://images.justwatch.com/poster/29989817/s592" srcset="static/img/poster02@2.jpg 2x" alt="신세계">
-                                       </figure>                                                                              
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>신세계</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="https://nujhrcqkiwag1408085.cdn.ntruss.com/static/upload/movie_poster_images/280x400/movie_104843_1649314656.jpg" srcset="static/img/poster03@2.jpg 2x" alt="마스터">
-                                       </figure>                                       
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>마스터</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="static/img/poster04.jpg" srcset="static/img/poster04@2.jpg 2x" alt="마약왕">
-                                       </figure>                                       
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="static/img/poster05.jpg" srcset="static/img/poster05@2.jpg 2x" alt="마약왕">
-                                       </figure>                                       
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="static/img/poster06.jpg" srcset="static/img/poster06@2.jpg 2x" alt="마약왕">
-                                       </figure>                                       
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
-                               <div class="swiper-slide">
-                                   <div class="poster">
-                                       <figure>
-                                           <img src="static/img/poster07.jpg" srcset="static/img/poster07@2.jpg 2x" alt="마약왕">
-                                       </figure>                                       
-                                   </div>
-                                   <div class="infor">
-                                       <h3><strong>마약왕</strong></h3>
-                                       <div class="infor_btn">
-                                           <a href="#">상세정보</a>
-                                           <a href="#">바로보기</a>
-                                       </div>
-                                   </div>
-                               </div>
+                               {% endfor %}
+                               
                                <div class="swiper-slide">
                                    <div class="poster">
                                        <figure>
@@ -172,86 +92,30 @@
                                            <a href="#">바로보기</a>
                                        </div>
                                    </div>
-                               </div>
+                               </div>                          
                            </div>
                         </div>
+                      
                         <!-- //chart_cont1-->                        
                         <div class="swiper-container2">
                             <div class="chart_cont2 swiper-wrapper">
+                                {% for list in movie|slice:"0:10" %}
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
-                                            <img src="static/img/poster07.jpg" srcset="static/img/poster07@2.jpg 2x" alt="침묵">
+                                            <img src="{{list.poster_link}}"  alt="침묵">
                                         </figure>                                        
                                     </div>
                                     <div class="infor">
-                                        <h3><strong>침묵</strong></h3>
+                                        <h3><strong>{{list.title}}</strong></h3>
                                         <div class="infor_btn">
                                             <a href="#">상세정보</a>
                                             <a href="#">바로보기</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="static/img/poster08.jpg" srcset="static/img/poster08@2.jpg 2x" alt="신세계">
-                                        </figure>
-                                        
-                                    </div>
-                                    <div class="infor">
-                                        <h3><strong>신세계</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">바로보기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="static/img/poster07.jpg" srcset="static/img/poster07@2.jpg 2x" alt="마스터">
-                                        </figure>
-                                        
-                                    </div>
-                                    <div class="infor">
-                                        <h3><strong>마스터</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">바로보기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="static/img/poster08.jpg" srcset="static/img/poster08@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        
-                                    </div>
-                                    <div class="infor">
-                                        <h3><strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">바로보기</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="poster">
-                                        <figure>
-                                            <img src="static/img/poster08.jpg" srcset="static/img/poster08@2.jpg 2x" alt="마약왕">
-                                        </figure>
-                                        
-                                    </div>
-                                    <div class="infor">
-                                        <h3><strong>마약왕</strong></h3>
-                                        <div class="infor_btn">
-                                            <a href="#">상세정보</a>
-                                            <a href="#">바로보기</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %} 
+                                
                                 <div class="swiper-slide">
                                     <div class="poster">
                                         <figure>
@@ -489,7 +353,7 @@
                     </div>
                     <div class="new_right">
                         <h3 class="title">로그 원: 스타워즈 스토리</h3>
-                        <span class="release">2016</span>
+                        <span class="release">2022</span>
                         <div class="star">
                             <span class="icon star1"></span>
                             <span class="icon star1"></span>
@@ -500,9 +364,9 @@
                             <strong>8/10</strong>
                         </div>
                         <ul class="summary">
-                            <li class="director"><span>감독 : </span><span class="bar">홍길동</span>
-                            <li class="actors"><span>배우 : </span><span class="bar">유재석, 노홍철, 정준하, 하하, 박명수</span>    
-                            <li class="genre"><span>장르 : </span><span class="bar">액션</span>
+                            <li class="director"><span>감독 : </span><span class="bar">강지원</span>
+                            <li class="actors"><span>배우 : </span><span class="bar">에스티킴, 레이팍, 클라크임</span>    
+                            <li class="genre"><span>장르 : </span><span class="bar">액션, 공포, 스릴러</span>
                             <li class="runtime"><span>재생 : </span><span class="bar">2시간 22분</span>
                             <li class="synopsis">시놉시스</li>                           
                             <li class="desc">단숨에 행성 하나를 파괴할 위력을 지닌 데스 스타가 완성되기 전에 설계도를 훔쳐내야 하는 이번 작전의 성공 확률은 고작 2.4%. 생사도 모르는 아버지에 얽힌 비밀을 밝히려는 진을 ...비롯해 유능한 정보 요원 ‘카시안’(디에고 루나), 두 눈이 멀었지만 탁월한 무술 실력을 지닌 ‘치루트’(견자단), 전투 베테랑 ‘베이즈’, 파일럿 ‘보디’, 시니컬한 드로이드 ‘K-2SO’까지 합류, 거대한 전쟁을 끝낼 ‘로그 원’이 이끄는 가장 비밀스런 작전이 시작되는데…</li>

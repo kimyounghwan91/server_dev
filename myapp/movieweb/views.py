@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Movie
-
+import random
 
 def index(request):
-    return render(request, 'index.html')
+    netflix = Movie.objects.filter(netflix=1) 
+    netflix = {"movie": netflix}
+    return render(request, 'index.html', netflix)
+
 
 def movie_detail(request):
     return render(request, "movie_detail/detail_page.html")
@@ -15,4 +18,10 @@ class movieweb(generic.TemplateView):
         template_name = 'movie_detail/movie_list.html'
         movie = Movie.objects.all()
         return render(request, template_name, {"movie":movie})
-        
+
+
+
+
+from django.db.models.aggregates import Count
+from random import randint
+
