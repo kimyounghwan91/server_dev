@@ -5,7 +5,7 @@ import random
 
 def index(request):
     netflix = Movie.objects.filter(netflix=1) 
-    netflix = {"movie": movie}
+    netflix = {"movie": netflix}
     return render(request, 'index.html', netflix)
 
 

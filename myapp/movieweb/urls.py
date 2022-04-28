@@ -7,7 +7,7 @@ app_name = "movieweb"
 
 urlpatterns = [  
     path("", views.index, name='index'),
-    path("movie/1", views.movie_detail),
+    path("movie/1", views.movie_detail, name="movie_detail"),
     path("movie/", views.movieweb.as_view(), name = "movieweb"),
     # path("movie/<int:pk>/", views.deatil_page, name = "detail_page")
 ]
