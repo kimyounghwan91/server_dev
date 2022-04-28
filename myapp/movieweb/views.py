@@ -5,7 +5,7 @@ import random
 
 def index(request):
     netflix = Movie.objects.filter(netflix=1) 
-    netflix = {"movie": netflix}
+    netflix = {"movie": movie}
     return render(request, 'index.html', netflix)
 
 
@@ -19,9 +19,4 @@ class movieweb(generic.TemplateView):
         movie = Movie.objects.all()
         return render(request, template_name, {"movie":movie})
 
-
-
-
-from django.db.models.aggregates import Count
-from random import randint
 
