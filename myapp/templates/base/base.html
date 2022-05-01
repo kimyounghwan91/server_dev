@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="#">
+                        <a href="{% url 'index' %}">
                             <em><img src="{% static 'img/logo-movis4.png' %}" height="60px" alt="MOVIS"></em>
                         </a>    
                     </h1>
@@ -59,7 +59,7 @@
                                     <i class="fas fa-microphone"></i>
                                 </div>
                             </div>
-                            <li style="width: 60px;"><a href='#'>영화</a></li>
+                            <li style="width: 60px;"><a href="{% url 'movieweb' %}">영화</a></li>
                             <li style="width: 75px;"><a href="#">로그인</a></li>
                             <li style="width: 85px;"><a href="#">회원가입</a></li>
                             <li style="width: 100px;"><a href="#">마이페이지</a></li>

@@ -23,7 +23,7 @@
                 <div class="movie-wrapper" >
                     {% for list in movie|slice:"0:100" %}     
                     <div class="MovieItem grid" key-data="{{list.id}}">
-                        <a href="#" title="{{list.title}}" style="display: block;">
+                        <a href="{% url 'detail_page' list.id %}", title="{{list.title}}" style="display: block;">
                             <div class="poster">                                    
                                 <img src="{{list.poster_link}}" alt="{{list.title}}">
                             </div>
@@ -43,4 +43,3 @@
     </section> 
 </main>
 {% endblock %}   
-

@@ -191,11 +191,11 @@
 /* 영화 상세 페이지 */
 .detail {padding: 100px 0; overflow: hidden; position: relative; }
 .detail h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
-.detail .detail_left {position: absolute; margin-right: 837px ; height: 100%; overflow: hidden; background: rgb(255, 255, 255)  center center; background-size: cover;}
+.detail .detail_left {position: relative; margin-right: 837px ; height: 100%; overflow: hidden; background: rgb(255, 255, 255)  center center; background-size: cover;}
 .detail .detail_left .play {position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; transform: translate(-50%,-50%); cursor: pointer;}
 .detail .detail_left .play .st0 {fill: #fff; opacity: 0.3;}
 .detail .detail_left .play .st1 {fill: #fff;}
-.detail .detail_right {position: absolute; right:0px; top: 120px; width: 826px; height: 586px; background: #ffffff; padding: 15px; box-sizing: border-box;}
+.detail .detail_right {position: absolute; right:0px; top: 120px; width: 826px; height: 586px; background: #ffffff; padding: 15px; box-sizing: border-box; word-break: break-all;}
 .detail .detail_right .title {font-size: 28px; color: #000;}
 .detail .detail_right .release {font-size: 15px; color: #333; }
 
@@ -206,7 +206,7 @@
 .detail .detail_right .star .star2 {background-position: -412px 0;}
 .detail .detail_right .star .star0 {background-position: -374px 0;}
 
-.detail .detail_right .summary {font-size: 14px;}
+.detail .detail_right .summary {font-size: 18px; word-break: break-all;}
 .detail .detail_right .summary .director {padding-bottom: 1px;}
 .detail .detail_right .summary .actors {padding-bottom: 1px;}
 .detail .detail_right .summary .genre {padding-bottom: 1px;}

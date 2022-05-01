@@ -3,11 +3,11 @@
 {% block content %}
 
 <section id="detail">   
-    <div class="container">        
-        <div class="row">
-
-            <div class="detail">
-                <h2><em></em></h2>
+    <div class="container">            
+        <div class="row">            
+            <div class="detail"> 
+                {% for list in movieDetail|slice:"0:100" %}                
+                <h2><em></em></h2>                
                 <div class="detail_left">          
                     <div class="poster">      
                         <figure>                            
@@ -15,18 +15,20 @@
                         </figure>                  
                     </div>                    
                 </div>
+                {% endfor %}
+                {% for list in movieDetail|slice:"0:100" %} 
                 <div class="detail_right">
                     <h3 class="title">{{list.title}}</h3>
                     <span class="release">{{list.opening_date}}</span>
-                    <div class="star">
+                    <!-- <div class="star">
                         <span class="icon star1"></span>
                         <span class="icon star1"></span>
                         <span class="icon star1"></span>
                         <span class="icon star1"></span>
-                        <!-- <span class="icon star1"></span> -->
+                        <span class="icon star1"></span>
                         <span class="icon star0"></span>
                         <strong>8/10</strong>
-                    </div>
+                    </div> -->
                     <ul class="summary">
                         <li class="director"><span>감독 : </span><span class="bar">{{list.director}}</span>
                         <li class="actors"><span>배우 : </span><span class="bar">{{list.actors}}</span>    
@@ -36,10 +38,12 @@
                         <li class="desc">{{list.synopsis}}</li>
                     </ul>                 
                 </div>
+                {% endfor %}
             </div>
-
-        </div>             
-    </div>   
+             
+        </div>                
+    </div>  
+     
 </section>
 
 {% endblock %}
